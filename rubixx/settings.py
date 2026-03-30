@@ -24,9 +24,11 @@ SECRET_KEY = 'django-insecure-4*chp1pg8wn((5+s!7jac&--lv7&c3k=b&8mqwvzce-vzy3h&a
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'rubixx-be.onrender.com',
+]
 
 # Application definition
 
@@ -57,8 +59,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOW_ORIGINS=[
- "https://rubixx-fe.vercel.app/solve",
+CORS_ALLOWED_ORIGINS=[
+    "https://rubixx-fe.vercel.app",  
+    "http://localhost:5173",  
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
